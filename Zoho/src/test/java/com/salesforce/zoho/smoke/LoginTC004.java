@@ -13,7 +13,7 @@ import com.salesforce.zoho.pages.leads.CreateLeadPage;
 import com.salesforce.zoho.pages.leads.LeadDetailsPage;
 import com.salesforce.zoho.pages.leads.LeadsListPage;
 
-public class TC004 extends BaseTest {
+public class LoginTC004 extends BaseTest {
 	CampaignsListPage campaginsListPage;
 	LeadsListPage leadsListPage;
 	String campaignName;
@@ -51,8 +51,7 @@ public class TC004 extends BaseTest {
 		Assert.assertEquals(leadsListPage.verifyLeadsListPageTitle(), true);
 		CreateLeadPage createLeadPage = leadsListPage.clickOnNewLeadButton();
 		Assert.assertEquals(createLeadPage.verifyTitle(), true);
-		LeadDetailsPage leadDetailsPage = createLeadPage.
-											createALead(companyName, lastName, campaignName);
+		LeadDetailsPage leadDetailsPage = createLeadPage.createALead(companyName, lastName, campaignName);
 		Assert.assertEquals(leadDetailsPage.verifyTitle(), true);
 		homePage.clickOnMenuLink(menuLinkName2);
 		Assert.assertEquals(leadsListPage.verifyLeadsListPageTitle(),true);
