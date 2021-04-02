@@ -30,7 +30,7 @@ public class TC004  extends BaseTest  {
 		campaginsListPage = (CampaignsListPage) homePage.clickOnMenuLink(menuLinkName);
 		Assert.assertEquals(campaginsListPage.verifyCampaignsListTitle(), true);
 		CreateCampaignPage createCampaignPage=campaginsListPage.clickOnNewCampaignButton();
-		Assert.assertEquals(createCampaignPage.verifyTitle(), true);
+		Assert.assertEquals(createCampaignPage.verifyTitle(), false);
 		CampaignDetailsPage campaignDetailsPage = createCampaignPage.createCampaigin(campaignName,
 											startDate,
 											expectedRevenue,
